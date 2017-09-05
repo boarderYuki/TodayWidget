@@ -7,12 +7,22 @@
 //
 
 import UIKit
+import randomWordKit
 
-class ViewController: UIViewController {
+class ViewController: HomeViewController {
 
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        getRandomNumberFirst()
+        getRandomNumberSecond()
+        getRandomNumberThird()
+        
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
