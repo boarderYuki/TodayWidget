@@ -16,24 +16,18 @@ open class HomeViewController: UIViewController {
     @IBOutlet open var thirdWordLabel: UILabel!
     
     
-
-    
-
-    
     public var randomNoFirst = 0
     var randomNoSecond = 0
     var randomNoThird = 0
     
 
-    open let firstWordList = ["1-1", "1-2", "1-3", "1-4", "1-5"]
-    let secondWordList = ["2-1", "2-2", "2-3", "2-4", "2-5"]
-    let thirdWordList = ["3-1", "3-2", "3-3", "3-4", "3-5"]
+    open let firstWordList = ["1", "2", "3", "4", "5", "6", "7", "8"]
+    let secondWordList = ["1", "2", "3", "4", "5", "6", "7", "8"]
+    let thirdWordList = ["1", "2", "3", "4", "5", "6", "7", "8"]
     
     override open func viewDidLoad() {
         super.viewDidLoad()
 
-        
-        
     }
 
 

@@ -31,6 +31,10 @@ class ViewController: HomeViewController {
     
     override func viewWillAppear(_ animated: Bool) {
 
+        if userDefaults?.value(forKey: "widgetKeywords") != nil {
+            performSegue(withIdentifier: "finalViewSegue", sender: nil)
+        }
+        
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(type(of: self).handleNoti(noti:)),

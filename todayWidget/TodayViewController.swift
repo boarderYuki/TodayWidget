@@ -69,7 +69,7 @@ class TodayViewController: HomeViewController, NCWidgetProviding {
         let widgetKeywords = [fw, sw, tw]
         
         userDefaults?.setValue(widgetKeywords, forKey: "widgetKeywords")
-        //userDefaults?.synchronize()
+        userDefaults?.synchronize()
         
         let url:URL = NSURL.fileURL(withPath: "WidgetTest://recent")
         extensionContext?.open(url, completionHandler: nil)

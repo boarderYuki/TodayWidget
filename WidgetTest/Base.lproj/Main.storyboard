@@ -40,18 +40,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WBr-ma-Irj">
-                                <rect key="frame" x="16" y="286" width="343" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WBr-ma-Irj">
+                                <rect key="frame" x="16" y="286" width="343" height="70"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="user default" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fJN-W7-hzs">
-                                        <rect key="frame" x="0.0" y="0.0" width="301" height="30"/>
+                                        <rect key="frame" x="122.5" y="0.0" width="98" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="71N-3X-lkq">
-                                        <rect key="frame" x="311" y="0.0" width="32" height="30"/>
-                                        <state key="normal" title="save"/>
+                                        <rect key="frame" x="130.5" y="40" width="82" height="30"/>
+                                        <state key="normal" title="위젯으로 보냄"/>
                                         <connections>
                                             <action selector="userDefaultSave:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZkE-9k-LU8"/>
                                         </connections>

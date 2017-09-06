@@ -20,7 +20,6 @@
 		B6F082021F5EF8B3001F868A /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F082011F5EF8B3001F868A /* TodayViewController.swift */; };
 		B6F082051F5EF8B3001F868A /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6F082031F5EF8B3001F868A /* MainInterface.storyboard */; };
 		B6F082091F5EF8B3001F868A /* todayWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B6F081FC1F5EF8B3001F868A /* todayWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		B6F082111F60146A001F868A /* TapBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F082101F60146A001F868A /* TapBarViewController.swift */; };
 		B6F082131F601BB4001F868A /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F082121F601BB4001F868A /* SecondViewController.swift */; };
 		B6F082151F602BBF001F868A /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F082141F602BBE001F868A /* FinalViewController.swift */; };
 /* End PBXBuildFile section */
@@ -86,7 +85,6 @@
 		B6F082061F5EF8B3001F868A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6F0820E1F5F87CE001F868A /* WidgetTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WidgetTest.entitlements; sourceTree = "<group>"; };
 		B6F0820F1F5F882D001F868A /* todayWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = todayWidget.entitlements; sourceTree = "<group>"; };
-		B6F082101F60146A001F868A /* TapBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapBarViewController.swift; sourceTree = "<group>"; };
 		B6F082121F601BB4001F868A /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		B6F082141F602BBE001F868A /* FinalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -148,7 +146,6 @@
 				B6F082121F601BB4001F868A /* SecondViewController.swift */,
 				B6F081D31F5EE98F001F868A /* Main.storyboard */,
 				B6F082141F602BBE001F868A /* FinalViewController.swift */,
-				B6F082101F60146A001F868A /* TapBarViewController.swift */,
 				B6F081D61F5EE98F001F868A /* Assets.xcassets */,
 				B6F081D81F5EE98F001F868A /* LaunchScreen.storyboard */,
 				B6F081DB1F5EE98F001F868A /* Info.plist */,
@@ -348,7 +345,6 @@
 				B6F082131F601BB4001F868A /* SecondViewController.swift in Sources */,
 				B6F081D21F5EE98F001F868A /* ViewController.swift in Sources */,
 				B6F081D01F5EE98F001F868A /* AppDelegate.swift in Sources */,
-				B6F082111F60146A001F868A /* TapBarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

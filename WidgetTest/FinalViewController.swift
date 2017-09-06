@@ -19,15 +19,12 @@ class FinalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        
+        userDefaults?.synchronize()
         if let t : [String] = userDefaults?.value(forKey: "widgetKeywords") as? [String] {
             
-            
-            print(t)
             firstWidgetLabel.text = t[0]
             secondWidgetLabel.text = t[1]
             thirdWidgetLabel.text = t[2]
@@ -37,13 +34,34 @@ class FinalViewController: UIViewController {
             thirdWidgetLabel.text = "--"
             
         }
-
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(type(of: self).handleNoti(noti:)),
+            name: .UIApplicationWillEnterForeground,
+            object: nil)
         
     }
+    
+    
+    func handleNoti(noti: Notification) {
+        if let t : [String] = userDefaults?.value(forKey: "widgetKeywords") as? [String] {
+            
+            firstWidgetLabel.text = t[0]
+            secondWidgetLabel.text = t[1]
+            thirdWidgetLabel.text = t[2]
+        }
+    }
+    
+    
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         userDefaults?.removeObject(forKey: "widgetKeywords")
+        NotificationCenter.default.removeObserver(self)
     }
+
+    
+    
 
 }

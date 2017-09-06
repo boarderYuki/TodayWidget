@@ -14,9 +14,7 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
-
     
     override func viewWillAppear(_ animated: Bool) {
         
@@ -28,18 +26,15 @@ class SecondViewController: UIViewController {
         
     }
     
-    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         NotificationCenter.default.removeObserver(self)
     }
-    
+
     
     func handleNoti(noti: Notification) {
         if userDefaults?.value(forKey: "widgetKeywords") != nil {
-            
             tabBarController?.selectedIndex = 0
-            
         }
     }
 
