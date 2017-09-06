@@ -11,9 +11,14 @@ import NotificationCenter
 import randomWordKit
 
 class TodayViewController: HomeViewController, NCWidgetProviding {
+
     
     @IBOutlet weak var reloadButton: UIButton!
     @IBOutlet weak var goToAppButton: UIButton!
+    
+    @IBOutlet weak var userKeyLabel: UILabel!
+    var userDefaults = UserDefaults(suiteName: "group.com.hi-yuki.WidgetTest")
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,18 +37,44 @@ class TodayViewController: HomeViewController, NCWidgetProviding {
         getRandomNumberFirst()
         getRandomNumberSecond()
         getRandomNumberThird()
+        
+        
+        
+        if let userKey = userDefaults?.value(forKey: "userKey") {
+            userKeyLabel.text = "userKey : \(userKey as! String)"
+        }
     }
     
     @IBAction func reloadWord(_ sender: Any) {
         getRandomNumberFirst()
         getRandomNumberSecond()
         getRandomNumberThird()
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    @IBAction func goToApp(_ sender: Any) {
+        
+        
+        let fw = firstWordLabel.text!
+        let sw = secondWordLabel.text!
+        let tw = thirdWordLabel.text!
+        
+        let widgetKeywords = [fw, sw, tw]
+        
+        userDefaults?.setValue(widgetKeywords, forKey: "widgetKeywords")
+        //userDefaults?.synchronize()
+        
+        let url:URL = NSURL.fileURL(withPath: "WidgetTest://recent")
+        extensionContext?.open(url, completionHandler: nil)
+    }
+    
     
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
         // Perform any setup necessary in order to update the view.
@@ -57,7 +88,7 @@ class TodayViewController: HomeViewController, NCWidgetProviding {
     
     func widgetActiveDisplayModeDidChange(_ activeDisplayMode: NCWidgetDisplayMode, withMaximumSize maxSize: CGSize) {
         let expanded = activeDisplayMode == .expanded
-        preferredContentSize = expanded ? CGSize(width: maxSize.width, height: 200) : maxSize
+        preferredContentSize = expanded ? CGSize(width: maxSize.width, height: 170) : maxSize
         toggleButton()
     }
     
@@ -71,4 +102,6 @@ class TodayViewController: HomeViewController, NCWidgetProviding {
             goToAppButton.alpha = 0
         }
     }
+    
+
 }

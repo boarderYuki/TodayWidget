@@ -20,6 +20,9 @@
 		B6F082021F5EF8B3001F868A /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F082011F5EF8B3001F868A /* TodayViewController.swift */; };
 		B6F082051F5EF8B3001F868A /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6F082031F5EF8B3001F868A /* MainInterface.storyboard */; };
 		B6F082091F5EF8B3001F868A /* todayWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B6F081FC1F5EF8B3001F868A /* todayWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B6F082111F60146A001F868A /* TapBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F082101F60146A001F868A /* TapBarViewController.swift */; };
+		B6F082131F601BB4001F868A /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F082121F601BB4001F868A /* SecondViewController.swift */; };
+		B6F082151F602BBF001F868A /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F082141F602BBE001F868A /* FinalViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +84,11 @@
 		B6F082011F5EF8B3001F868A /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		B6F082041F5EF8B3001F868A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		B6F082061F5EF8B3001F868A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6F0820E1F5F87CE001F868A /* WidgetTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WidgetTest.entitlements; sourceTree = "<group>"; };
+		B6F0820F1F5F882D001F868A /* todayWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = todayWidget.entitlements; sourceTree = "<group>"; };
+		B6F082101F60146A001F868A /* TapBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapBarViewController.swift; sourceTree = "<group>"; };
+		B6F082121F601BB4001F868A /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		B6F082141F602BBE001F868A /* FinalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,9 +142,13 @@
 		B6F081CE1F5EE98F001F868A /* WidgetTest */ = {
 			isa = PBXGroup;
 			children = (
+				B6F0820E1F5F87CE001F868A /* WidgetTest.entitlements */,
 				B6F081CF1F5EE98F001F868A /* AppDelegate.swift */,
 				B6F081D11F5EE98F001F868A /* ViewController.swift */,
+				B6F082121F601BB4001F868A /* SecondViewController.swift */,
 				B6F081D31F5EE98F001F868A /* Main.storyboard */,
+				B6F082141F602BBE001F868A /* FinalViewController.swift */,
+				B6F082101F60146A001F868A /* TapBarViewController.swift */,
 				B6F081D61F5EE98F001F868A /* Assets.xcassets */,
 				B6F081D81F5EE98F001F868A /* LaunchScreen.storyboard */,
 				B6F081DB1F5EE98F001F868A /* Info.plist */,
@@ -165,6 +177,7 @@
 		B6F082001F5EF8B3001F868A /* todayWidget */ = {
 			isa = PBXGroup;
 			children = (
+				B6F0820F1F5F882D001F868A /* todayWidget.entitlements */,
 				B6F082011F5EF8B3001F868A /* TodayViewController.swift */,
 				B6F082031F5EF8B3001F868A /* MainInterface.storyboard */,
 				B6F082061F5EF8B3001F868A /* Info.plist */,
@@ -254,7 +267,13 @@
 				TargetAttributes = {
 					B6F081CB1F5EE98F001F868A = {
 						CreatedOnToolsVersion = 8.3.2;
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = LGG4PHM8YL;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					B6F081E91F5EED17001F868A = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -262,7 +281,13 @@
 					};
 					B6F081FB1F5EF8B3001F868A = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = LGG4PHM8YL;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -319,8 +344,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6F082151F602BBF001F868A /* FinalViewController.swift in Sources */,
+				B6F082131F601BB4001F868A /* SecondViewController.swift in Sources */,
 				B6F081D21F5EE98F001F868A /* ViewController.swift in Sources */,
 				B6F081D01F5EE98F001F868A /* AppDelegate.swift in Sources */,
+				B6F082111F60146A001F868A /* TapBarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,7 +511,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_ENTITLEMENTS = WidgetTest/WidgetTest.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = LGG4PHM8YL;
 				INFOPLIST_FILE = WidgetTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hi-yuki.WidgetTest";
@@ -498,7 +528,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_ENTITLEMENTS = WidgetTest/WidgetTest.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = LGG4PHM8YL;
 				INFOPLIST_FILE = WidgetTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hi-yuki.WidgetTest";
@@ -559,11 +591,14 @@
 		B6F0820B1F5EF8B3001F868A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_ENTITLEMENTS = todayWidget/todayWidget.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = LGG4PHM8YL;
 				INFOPLIST_FILE = todayWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hi-yuki.WidgetTest.todayWidget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -572,11 +607,14 @@
 		B6F0820C1F5EF8B3001F868A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_ENTITLEMENTS = todayWidget/todayWidget.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = LGG4PHM8YL;
 				INFOPLIST_FILE = todayWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hi-yuki.WidgetTest.todayWidget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -601,6 +639,7 @@
 				B6F081E01F5EE98F001F868A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B6F081F31F5EED17001F868A /* Build configuration list for PBXNativeTarget "randomWordKit" */ = {
 			isa = XCConfigurationList;
@@ -609,6 +648,7 @@
 				B6F081F51F5EED17001F868A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B6F0820A1F5EF8B3001F868A /* Build configuration list for PBXNativeTarget "todayWidget" */ = {
 			isa = XCConfigurationList;
@@ -617,6 +657,7 @@
 				B6F0820C1F5EF8B3001F868A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
